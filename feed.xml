@@ -1,1 +1,188 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-08-15T03:49:15+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">RAYPLANT</title><subtitle>학이불사즉망, 사이불학즉태(學而不思則罔,思而不學則殆)</subtitle><entry><title type="html">Web3.Storage 가입</title><link href="http://localhost:4000/web3storage-basic" rel="alternate" type="text/html" title="Web3.Storage 가입" /><published>2022-08-14T22:48:00+09:00</published><updated>2022-08-14T22:48:00+09:00</updated><id>http://localhost:4000/web3storage-basic</id><content type="html" xml:base="http://localhost:4000/web3storage-basic">&lt;p&gt;이 글은 Web3.Storage 에 관한 글입니다.&lt;/p&gt;</content><author><name>RAYPLANT</name></author><category term="web3storage" /><summary type="html">이 글은 Web3.Storage 에 관한 글입니다.</summary></entry></feed>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-08-15T05:44:12+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">RAYPLANT</title><subtitle>학이불사즉망, 사이불학즉태(學而不思則罔,思而不學則殆)</subtitle><entry><title type="html">Web3.Storage 사용</title><link href="http://localhost:4000/web3storage-basic" rel="alternate" type="text/html" title="Web3.Storage 사용" /><published>2022-08-14T22:48:00+09:00</published><updated>2022-08-14T22:48:00+09:00</updated><id>http://localhost:4000/web3storage-basic</id><content type="html" xml:base="http://localhost:4000/web3storage-basic">&lt;p&gt;Web3.Storage에 가입해서 발급받은 API 토큰이 있으면 프로젝트, 웹사이트 또는 웹 응용프로그램에서 사용되는 데이터를 무료로 여러 저장소에 분산하여 저장할 수 있습니다.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Web3.Storage 계정 만들기.&lt;/li&gt;
+  &lt;li&gt;무료 API 토큰 받기.&lt;/li&gt;
+  &lt;li&gt;파일을 업로드하는 간단한 스크립트를 만들고 실행 합니다.&lt;/li&gt;
+  &lt;li&gt;브라우저 또는 curl을 사용하여 업로드 된 파일을 가져옵니다.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Node.js를 사용하면 Web3.Storage JavaScript 클라이언트를 프로그래밍 방식으로 가장 빨리 사용할 수 있습니다. 하지만 Node가 좋아하는 런타임 환경이 아니거나 코딩을 전혀 하지 못해도 걱정할 필요가 없습니다.
+다음과 같은 방법으로 Web3.Storage를 사용할 수도 있습니다.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;선택한 JS 런타임을 사용하여 JavaScript 클라이언트 라이브러리의 API 메소드로 작업하니다.
+Web3.Storage 웹 사이트의 계정 페이지에서 직접 파일을 업로드하고 검색합니다.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;필수 구성 요소
+이 가이드를 완료하려면 노드 버전 14 이상과 NPM 버전 7 이상이 필요합니다. 다음과 같이 로컬 버전을 확인하십시오.&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;node --version &amp;amp;&amp;amp; npm --version
+&amp;gt; v16.4.2
+&amp;gt; 7.18.1
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;계정 만들기
+API 토큰을 가져오고 저장된 데이터를 관리하려면 Web3.Storage 계정이 필요합니다. 이메일 주소 또는 GitHub를 사용하여 무료로 가입할 수 있습니다.&lt;/p&gt;
+
+&lt;h4 id=&quot;이메일을-사용하여-가입하기&quot;&gt;이메일을 사용하여 가입하기&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;시작하려면 web3.storage/login으로 이동하십시오.&lt;/li&gt;
+  &lt;li&gt;이메일 주소를 입력합니다.&lt;/li&gt;
+  &lt;li&gt;받은 편지함에서 Web3.Storage에서 확인 전자 메일을 확인하고 전자 메일에서 로그인 단추를 클릭합니다.&lt;/li&gt;
+  &lt;li&gt;모든 준비가 완료되었습니다!&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;github를-사용하여-가입&quot;&gt;Github를 사용하여 가입&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;시작 하려면 web3.storage/login 으로 이동하십시오 .&lt;/li&gt;
+  &lt;li&gt;로그인 화면에서 GitHub 를 클릭 합니다.&lt;/li&gt;
+  &lt;li&gt;GitHub에서 요청하면 Web3.Storage를 승인 합니다.&lt;/li&gt;
+  &lt;li&gt;준비가 완료되었습니다!&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;이제 가입하고 로그인했으므로 API 토큰을 받을 차례입니다.&lt;/p&gt;
+
+&lt;h4 id=&quot;api-토큰-받기&quot;&gt;API 토큰 받기&lt;/h4&gt;
+&lt;p&gt;Web3.Storage에서 무료 API 토큰을 얻는 데 몇 분 밖에 걸리지 않습니다. 이 토큰을 사용하면 기본 웹 사이트를 사용하지 않고도 Web3.Storage 서비스와 상호 작용할 수 있으므로 Web3.Storage를 사용하여 저장된 파일을 응용 프로그램 및 서비스에 직접 통합 할 수 있습니다.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;계정 위로 마우스를 가져간 다음 드롭다운 메뉴에서 API 토큰 만들기를 클릭하여 Web3.Storage API 토큰 페이지로 이동합니다.&lt;/li&gt;
+  &lt;li&gt;API 토큰에 대한 설명이 포함된 이름을 입력하고 만들기를 클릭합니다.&lt;/li&gt;
+  &lt;li&gt;잃어버리지 않을 안전한 곳에 토큰 필드 를 기록해 두십시오 . 복사 를 클릭 하여 새 API 토큰을 클립보드에 복사할 수 있습니다.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;API 토큰을 비공개로 유지
+   API 토큰을 다른 사람과 공유하지 마십시오. 이 키는 계정에 따라 다릅니다.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;이제 새 API 토큰이 있으므로 간단한 스크립트를 사용하여 Web3.Storage에 파일을 업로드할 차례입니다. ↓&lt;/p&gt;
+
+&lt;h4 id=&quot;업로드-스크립트-만들기&quot;&gt;업로드 스크립트 만들기&lt;/h4&gt;
+&lt;p&gt;Web3.Storage 사이트를 사용하여 파일을 업로드할 수 있지만 간단한 업로드 스크립트를 빠르고 쉽게 만들고 실행할 수 있으므로 많은 수의 파일을 추가하는 것이 특히 편리합니다. 이 스크립트에는 Web3.Storage에 파일을 업로드하고 그 대가로 CID(콘텐츠 식별자)를 다시 가져오는 논리가 포함되어 있습니다.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;주의
+Web3.Storage에 업로드 된 모든 데이터는 올바른 CID를 사용하여 요청하는 모든 사람이 사용할 수 있습니다. Web3.Storage를 사용하여 개인 정보나 민감한 정보를 암호화되지 않은 형태로 저장하지 마십시오.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;이 빠른 시작 프로젝트에 대한 폴더를 만들고 해당 폴더로 이동합니다.
+    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;mkdir web3-storage-quickstart
+cd web3-storage-quickstart
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;put-files.js 파일을 만들고 다음 코드를 붙여 넣습니다.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;process&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;process&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;minimist&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;minimist&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Web3Storage&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;getFilesFromPath&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;web3.storage&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;async&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;main&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;args&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;minimist&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;process&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;argv&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;slice&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+  &lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;token&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;args&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;token&lt;/span&gt;
+
+  &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;!&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;token&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;error&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;A token is needed. You can create one on https://web3.storage&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+  &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;args&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;_&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;length&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;error&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;Please supply the path to a file or directory&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+  &lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;storage&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Web3Storage&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;token&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;
+  &lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;files&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[]&lt;/span&gt;
+
+  &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;path&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;of&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;args&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;_&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;pathFiles&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;await&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;getFilesFromPath&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;path&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;files&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;push&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(...&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;pathFiles&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+  &lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;`Uploading &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;files&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;length&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt; files`&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;cid&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;await&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;storage&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;put&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;files&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;Content added with CID:&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;cid&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;nx&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;package.json 파일을 만들고 다음 코드에서 붙여 넣습니다.&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;{
+    &quot;name&quot;: &quot;web3-storage-quickstart&quot;,
+    &quot;version&quot;: &quot;0.0.0&quot;,
+    &quot;private&quot;: true,
+    &quot;description&quot;: &quot;Get started using web3.storage in Node.js&quot;,
+    &quot;type&quot;: &quot;module&quot;,
+    &quot;scripts&quot;: {
+        &quot;test&quot;: &quot;echo \&quot;Error: no test specified\&quot; &amp;amp;&amp;amp; exit 1&quot;
+    },
+    &quot;dependencies&quot;: {
+        &quot;minimist&quot;: &quot;^1.2.5&quot;,
+        &quot;web3.storage&quot;: &quot;^3.1.0&quot;
+    },
+    &quot;author&quot;: &quot;YOUR NAME&quot;,
+    &quot;license&quot;: &quot;(Apache-2.0 AND MIT)&quot;
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;두 파일을 모두 저장 한 다음 프로젝트 폴더에서 npm install을  실행하십시오.&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;npm install
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;이 단계는 몇 분 정도 걸릴 수 있습니다. 완료되면 명령은 다음과 같이 출력해야합니다.&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;added 224 packages, and audited 225 packages in 14s
+
+40 packages are looking for funding
+ run `npm fund` for details
+
+found 0 vulnerabilities
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;당신의 스크립트는 갈 수 있습니다! 다음으로 스크립트를 실행하여 파일을 업로드합니다.&lt;/p&gt;
+
+&lt;h4 id=&quot;스크립트-실행&quot;&gt;스크립트 실행&lt;/h4&gt;
+&lt;p&gt;이제 스크립트를 사용할 준비가 되었으니 터미널 창에서 .node&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;node put-files.js–token 를 호출하여 API 토큰을 제공하고 업로드하려는 파일의 경로와 이름을 지정하여 스크립트를 실행합니다. 한 번에 둘 이상의 파일을 업로드하려면 단일 명령으로 경로/이름을 차례로 지정하기만 하면 됩니다. 템플릿 형식으로 표시되는 방법은 다음과 같습니다.
+    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;node put-files.js --token=&amp;lt;YOUR_TOKEN&amp;gt; ~/filename1 ~/filename2 ~/filenameN
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;세부 정보를 입력했으면 명령은 다음과 같아야 합니다.&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;node put-files.js --token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJkaWQ6ZXRocjoweGZFYTRhODlFNUVhRjY5YWI4QUZlZUU3MUE5OTgwQjFGQ2REZGQzNzIiLCJpc3MiOiJ3ZWIzLXN0b3JhZ2UiLCJpYXQiOjE2MjY5Njk3OTY1NTQsIm5hbWUiOiJib25maXJlIn0.0S9Ua2FWEAZSwaemy92N7bW8ancRUtu4XtLS3Gy1ouA ~/hello.txt
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;여러 파일
+스크립트에 로컬 디렉토리의 경로를 제공하여 파일로 가득 찬 전체 디렉토리를 한 번에 업로드 할 수 있습니다. 스크립트를 실행할 때 둘 이상의 파일 경로를 전달하여 여러 파일을 업로드할 수도 있습니다.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;이 명령은 CID를 출력합니다.
+    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Content added with CID: bafybeig7sgl52pc6ihypxhk2yy7gcllu4flxgfwygp7klb5xdjdrm7onse
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;bafyb…처럼 보이는 CID를 기록하십시오.
+파일을 가져오려면 파일이 필요합니다.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;업로드 상태 가져오기
+JavaScript 클라이언트 라이브러리 내의 메서드를 사용하여 CID, 업로드 날짜, 네트워크의 크기, IPFS 고정 및 Filecoin 저장소 트랜잭션에 대한 정보를 포함하여 업로드에 대한 다양한 세부 정보를 얻을 수 있습니다. 자세한 내용은 쿼리 방법 가이드를 참조하세요.status()&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;다음으로 Web3.Storage에서 데이터를 검색하는 두 가지 방법을 살펴 보겠습니다.&lt;/p&gt;
+
+&lt;h4 id=&quot;파일-가져오기&quot;&gt;파일 가져오기&lt;/h4&gt;
+&lt;p&gt;이 가이드에서 이미 가장 어려운 작업을 수행했습니다 - Web3.Storage에서 파일을 가져 오는 것은 간단합니다.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;https://dweb.link/ipfs/YOUR_CIDYOUR_CID로 이동하여 마지막 단계에서 기록한 CID로 바꿉니다.&lt;/li&gt;
+  &lt;li&gt;파일에 대한 링크가 표시됩니다. 한 번에 여러 파일을 업로드한 경우 업로드한 모든 파일 목록이 표시됩니다.&lt;/li&gt;
+  &lt;li&gt;파일의 링크를 클릭하여 브라우저에서 볼 수 있습니다!&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h6 id=&quot;파일-다시-찾기&quot;&gt;파일 다시 찾기&lt;/h6&gt;
+&lt;p&gt;파일을 다시 찾아야 하는데 CID를 잊어버린 경우 Web3.Storage의 파일 테이블로 이동하십시오.&lt;/p&gt;</content><author><name>RAYPLANT</name></author><category term="web3storage" /><summary type="html">Web3.Storage에 가입해서 발급받은 API 토큰이 있으면 프로젝트, 웹사이트 또는 웹 응용프로그램에서 사용되는 데이터를 무료로 여러 저장소에 분산하여 저장할 수 있습니다.</summary></entry></feed>
