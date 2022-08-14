@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     
     <url>
-        <loc>http://localhost:4000/web3storage-basic</loc>
+        <loc>https://https://rayplant.github.io/web3storage-basic</loc>
     </url>
     
 
@@ -10,7 +10,7 @@
     
     
     <url>
-        <loc>http://localhost:4000/404.html</loc>
+        <loc>https://rayplant.github.io/404.html</loc>
     </url>
     
     
@@ -20,7 +20,7 @@
     
     
     <url>
-        <loc>http://localhost:4000/</loc>
+        <loc>https://rayplant.github.io/</loc>
     </url>
     
     
@@ -28,19 +28,7 @@
     
     
     <url>
-        <loc>http://localhost:4000/about/</loc>
-    </url>
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    <url>
-        <loc>http://localhost:4000/tag/web3storage/</loc>
+        <loc>https://rayplant.github.io/about/</loc>
     </url>
     
     
@@ -49,8 +37,20 @@
     
     
     
+    
+    
     <url>
-        <loc>http://localhost:4000/author/rayplant/</loc>
+        <loc>https://rayplant.github.io/tag/web3storage/</loc>
+    </url>
+    
+    
+    
+    
+    
+    
+    
+    <url>
+        <loc>https://rayplant.github.io/author/rayplant/</loc>
     </url>
     
     
