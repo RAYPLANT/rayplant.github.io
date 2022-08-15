@@ -2,10 +2,10 @@
 
 <feed xmlns="http://www.w3.org/2005/Atom" >
   <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
-  <link href="http://localhost:4000/tag/web3storage/feed.xml" rel="self" type="application/atom+xml" />
-  <link href="http://localhost:4000/" rel="alternate" type="text/html" />
-  <updated>2022-08-15T09:58:24+09:00</updated>
-  <id>http://localhost:4000/tag/web3storage/feed.xml</id>
+  <link href="https://rayplant.github.io/tag/web3storage/feed.xml" rel="self" type="application/atom+xml" />
+  <link href="https://rayplant.github.io/" rel="alternate" type="text/html" />
+  <updated>2022-08-15T19:46:55+09:00</updated>
+  <id>https://rayplant.github.io/tag/web3storage/feed.xml</id>
 
   
   
@@ -15,8 +15,6 @@
     <title type="html">RAYPLANT | </title>
   
 
-  
-    <subtitle>학이불사즉망, 사이불학즉태(學而不思則罔,思而不學則殆)</subtitle>
   
 
   
@@ -33,11 +31,11 @@
   
     <entry>
       <title type="html">Web3.Storage 사용</title>
-      <link href="http://localhost:4000/web3storage-basic" rel="alternate" type="text/html" title="Web3.Storage 사용" />
+      <link href="https://rayplant.github.io/web3storage-basic" rel="alternate" type="text/html" title="Web3.Storage 사용" />
       <published>2022-08-14T22:48:00+09:00</published>
       <updated>2022-08-14T22:48:00+09:00</updated>
-      <id>http://localhost:4000/web3storage-basic</id>
-      <content type="html" xml:base="http://localhost:4000/web3storage-basic">&lt;p&gt;Web3.Storage에 가입해서 발급받은 API 토큰이 있으면 프로젝트, 웹사이트 또는 웹 응용프로그램에서 사용되는 데이터를 무료로 여러 저장소에 분산하여 저장할 수 있습니다.&lt;/p&gt;
+      <id>https://rayplant.github.io/web3storage-basic</id>
+      <content type="html" xml:base="https://rayplant.github.io/web3storage-basic">&lt;p&gt;Web3.Storage에 가입해서 발급받은 API 토큰이 있으면 프로젝트, 웹사이트 또는 웹 응용프로그램에서 사용되는 데이터를 무료로 여러 저장소에 분산하여 저장할 수 있습니다.&lt;/p&gt;
 
 &lt;ol&gt;
   &lt;li&gt;Web3.Storage 계정 만들기.&lt;/li&gt;
