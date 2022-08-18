@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
   <link href="https://rayplant.github.io/tag/web3storage/feed.xml" rel="self" type="application/atom+xml" />
   <link href="https://rayplant.github.io/" rel="alternate" type="text/html" />
-  <updated>2022-08-17T00:53:58+09:00</updated>
+  <updated>2022-08-18T21:34:55+09:00</updated>
   <id>https://rayplant.github.io/tag/web3storage/feed.xml</id>
 
   
@@ -30,8 +30,8 @@
 
   
     <entry>
-      <title type="html">Web3.Storage 사용</title>
-      <link href="https://rayplant.github.io/web3storage-basic" rel="alternate" type="text/html" title="Web3.Storage 사용" />
+      <title type="html">IPFS와 Filecoin storage web3.storage 사용</title>
+      <link href="https://rayplant.github.io/web3storage-basic" rel="alternate" type="text/html" title="IPFS와 Filecoin storage web3.storage 사용" />
       <published>2022-08-14T22:48:00+09:00</published>
       <updated>2022-08-14T22:48:00+09:00</updated>
       <id>https://rayplant.github.io/web3storage-basic</id>
@@ -216,7 +216,7 @@ found 0 vulnerabilities
 &lt;p&gt;이 가이드에서 이미 가장 어려운 작업을 수행했습니다 - Web3.Storage 사이트에서 파일을 가져 오는 것은 간단합니다.&lt;/p&gt;
 
 &lt;ol&gt;
-  &lt;li&gt;마지막 단계에서 기록한 CID로 교체하여 https://dweb.link/ipfs/YOUR_CIDYOUR_CID로 이동하세요.&lt;/li&gt;
+  &lt;li&gt;YOUR_CID를 마지막 단계에서 기록한 CID로 교체하여 https://dweb.link/ipfs/YOUR_CID로 이동하세요.&lt;/li&gt;
   &lt;li&gt;파일에 대한 링크가 표시됩니다. 한 번에 여러 파일을 업로드한 경우라면, 업로드한 모든 파일 목록이 표시될 것입니다.&lt;/li&gt;
   &lt;li&gt;파일의 링크를 클릭하여 브라우저에서 볼 수 있습니다!&lt;/li&gt;
 &lt;/ol&gt;
