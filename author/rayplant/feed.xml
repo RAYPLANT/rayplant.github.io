@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
   <link href="https://rayplant.github.io/author/rayplant/feed.xml" rel="self" type="application/atom+xml" />
   <link href="https://rayplant.github.io/" rel="alternate" type="text/html" />
-  <updated>2022-08-18T21:34:55+09:00</updated>
+  <updated>2022-08-18T21:47:57+09:00</updated>
   <id>https://rayplant.github.io/author/rayplant/feed.xml</id>
 
   
@@ -239,7 +239,11 @@ found 0 vulnerabilities
       
 
       
-        <category term="web3storage" />
+        <category term="web3.storage" />
+      
+        <category term="ipfs" />
+      
+        <category term="filecoin" />
       
 
       
